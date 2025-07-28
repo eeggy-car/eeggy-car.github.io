@@ -1,0 +1,19 @@
+# robots.txt for eggy-car-official.com
+
+# Applies to all user agents (search engine bots)
+User-agent: *
+
+# Allow all content to be crawled (default behavior)
+Allow: /
+
+# Disallow sensitive or unnecessary folders (adjust based on your project structure)
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /test/
+Disallow: /node_modules/
+
+# Crawl-delay is not honored by Google but used by other bots (optional)
+# Crawl-delay: 10
+
+# Link to your sitemap to help bots index better
+Sitemap: https://eeggy-car.github.io/sitemap.xml

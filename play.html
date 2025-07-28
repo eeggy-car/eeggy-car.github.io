@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="Eggy Car - Play Eggy Car Online Now! Drive a car with an egg as far as you can on a hilly road! Play this driving game, collect coins, and grab power-ups!">
+    <title>Eggy Car 🥚🚗 - Play Eggy Car Online Now!</title>
+    <link rel="canonical" href="https://eeggy-car.github.io/play.html">
+    <meta name="robots" content="index, follow" />
+    <!-- Css -->
+    <!-- Dark Mode JS -->
+    <script src="/js/darkMode.bundle.js"></script>
+<link rel="stylesheet" href="/css/p.css">
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="/img/favicon.png" />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="js-page-header fixed top-0 z-20 w-full backdrop-blur transition-colors" style="backdrop-filter:none">
+        <div class="flex items-center px-6 py-6 xl:px-24">
+          <!-- Logo -->
+          <a href="/" class="shrink-0">
+            <img src="/img/logo.png" class="max-h-7 dark:hidden" alt="Eggy Car Unblocked" />
+            <img src="/img/logo_white.png" class="hidden max-h-7 dark:block" alt="Eggy Car Unblocked" />
+          </a>
+  
+          <!-- Search -->
+          <form action="search" class="relative ml-12 mr-8 basis-3/12 lg:block xl:ml-[8%]">
+        <input id="search-input" type="search"
+          class="text-jacarta-700 placeholder-jacarta-500 focus:ring-accent border-jacarta-100 w-full rounded-2xl border py-[0.6875rem] px-4 pl-10 dark:border-transparent dark:bg-white/[.15] dark:text-white dark:placeholder-white"
+          placeholder="Search" autocomplete="off" />
+        <span class="absolute left-0 top-0 flex h-full w-12 items-center justify-center rounded-2xl">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+            class="fill-jacarta-500 h-4 w-4 dark:fill-white">
+            <path fill="none" d="M0 0h24v24H0z" />
+            <path
+              d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0 1 11 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 0 1-1.969 5.617zm-2.006-.742A6.977 6.977 0 0 0 18 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 0 0 4.875-1.975l.15-.15z" />
+          </svg>
+        </span>
+        <div id="search-results"></div>
+      </form>
+  
+          <!-- Menu / Actions -->
+          <div
+            class="js-mobile-menu dark:bg-jacarta-800 invisible fixed inset-0 z-10 ml-auto items-center bg-white opacity-0 lg:visible lg:relative lg:inset-auto lg:flex lg:bg-transparent lg:opacity-100 dark:lg:bg-transparent"
+          >
+            <!-- Mobile Logo / Menu Close -->
+            <div
+              class="t-0 dark:bg-jacarta-800 fixed left-0 z-10 flex w-full items-center justify-between bg-white p-6 lg:hidden"
+            >
+              <!-- Mobile Logo -->
+              <a href="/" class="shrink-0">
+                <img src="/img/logo.png" class="max-h-7 dark:hidden" alt="Eggy Car Unblocked" />
+                <img src="/img/logo_white.png" class="hidden max-h-7 dark:block" alt="Eggy Car Unblocked" />
+              </a>
+  
+              <!-- Mobile Menu Close -->
+              <button
+                class="js-mobile-close border-jacarta-100 hover:bg-accent focus:bg-accent group dark:hover:bg-accent ml-2 flex h-10 w-10 items-center justify-center rounded-full border bg-white transition-colors hover:border-transparent focus:border-transparent dark:border-transparent dark:bg-white/[.15]"
+                aria-label="close mobile menu"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                  class="fill-jacarta-700 h-4 w-4 transition-colors group-hover:fill-white group-focus:fill-white dark:fill-white"
+                >
+                  <path fill="none" d="M0 0h24v24H0z" />
+                  <path
+                    d="M12 10.586l4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636z"
+                  />
+                </svg>
+              </button>
+            </div>
+  
+            <!-- Mobile Search -->
+            <form action="search" class="relative mt-24 mb-8 w-full lg:hidden">
+          <input id="mobile-search-input" type="search"
+            class="text-jacarta-700 placeholder-jacarta-500 focus:ring-accent border-jacarta-100 w-full rounded-2xl border py-3 px-4 pl-10 dark:border-transparent dark:bg-white/[.15] dark:text-white dark:placeholder-white"
+            placeholder="Search" />
+          <span class="absolute left-0 top-0 flex h-full w-12 items-center justify-center rounded-2xl">
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+              class="fill-jacarta-500 h-4 w-4 dark:fill-white">
+              <path fill="none" d="M0 0h24v24H0z" />
+              <path
+                d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0 1 11 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 0 1-1.969 5.617zm-2.006-.742A6.977 6.977 0 0 0 18 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 0 0 4.875-1.975l.15-.15z" />
+            </svg>
+          </span>
+        </form>
+        <div id="mobile-search-results"
+          style="display:none;position:absolute;top:110%;left:0;background:#fff;z-index:1000;border-radius:0 0 12px 12px;box-shadow:0 8px 24px rgba(0,0,0,0.08);overflow:hidden;">
+        </div>
+  
+            <!-- Primary Nav -->
+            <nav class="navbar w-full">
+              <ul class="flex flex-col lg:flex-row">
+                <li class="js-nav-dropdown group relative">
+                  <a
+                    href="/"
+                    class="dropdown-toggle text-jacarta-700 font-display hover:text-accent focus:text-accent dark:hover:text-accent dark:focus:text-accent flex items-center justify-between py-3.5 text-base dark:text-white lg:px-5"
+                    >Home
+  
+                  </a>
+                </li>
+                <li class="group">
+                  <a
+                    href="car.html"
+                    class="text-jacarta-700 font-display hover:text-accent focus:text-accent dark:hover:text-accent dark:focus:text-accent flex items-center justify-between py-3.5 text-base dark:text-white lg:px-5"
+                    >Car</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="skill.html"
+                    class="text-jacarta-700 font-display hover:text-accent focus:text-accent dark:hover:text-accent dark:focus:text-accent flex items-center justify-between py-3.5 text-base dark:text-white lg:px-5"
+                    >Skill</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="action.html"
+                    class="text-jacarta-700 font-display hover:text-accent focus:text-accent dark:hover:text-accent dark:focus:text-accent flex items-center justify-between py-3.5 text-base dark:text-white lg:px-5"
+                    >Action</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="shooting.html"
+                    class="text-jacarta-700 font-display hover:text-accent focus:text-accent dark:hover:text-accent dark:focus:text-accent flex items-center justify-between py-3.5 text-base dark:text-white lg:px-5"
+                    >Shooting</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="sport.html"
+                    class="text-jacarta-700 font-display hover:text-accent focus:text-accent dark:hover:text-accent dark:focus:text-accent flex items-center justify-between py-3.5 text-base dark:text-white lg:px-5"
+                    >Sport</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="idle.html"
+                    class="text-jacarta-700 font-display hover:text-accent focus:text-accent dark:hover:text-accent dark:focus:text-accent flex items-center justify-between py-3.5 text-base dark:text-white lg:px-5"
+                    >Idle</a
+                  >
+                </li>
+              </ul>
+            </nav>
+  
+            <!-- Actions -->
+            <div class="ml-8 hidden lg:flex xl:ml-12">
+              <!-- Dark Mode -->
+              <a
+                href="#"
+                class="border-jacarta-100 hover:bg-accent focus:bg-accent group dark:hover:bg-accent js-dark-mode-trigger ml-2 flex h-10 w-10 items-center justify-center rounded-full border bg-white transition-colors hover:border-transparent focus:border-transparent dark:border-transparent dark:bg-white/[.15]"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                  class="fill-jacarta-700 dark-mode-light h-4 w-4 transition-colors group-hover:fill-white group-focus:fill-white dark:hidden"
+                >
+                  <path fill="none" d="M0 0h24v24H0z" />
+                  <path
+                    d="M11.38 2.019a7.5 7.5 0 1 0 10.6 10.6C21.662 17.854 17.316 22 12.001 22 6.477 22 2 17.523 2 12c0-5.315 4.146-9.661 9.38-9.981z"
+                  />
+                </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                  class="fill-jacarta-700 dark-mode-dark hidden h-4 w-4 transition-colors group-hover:fill-white group-focus:fill-white dark:block dark:fill-white"
+                >
+                  <path fill="none" d="M0 0h24v24H0z" />
+                  <path
+                    d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+  
+          <!-- Mobile Menu Actions -->
+          <div class="ml-auto flex lg:hidden">
+  
+            <!-- Dark Mode -->
+            <a
+              href="#"
+              class="js-dark-mode-trigger border-jacarta-100 hover:bg-accent dark:hover:bg-accent focus:bg-accent group ml-2 flex h-10 w-10 items-center justify-center rounded-full border bg-white transition-colors hover:border-transparent focus:border-transparent dark:border-transparent dark:bg-white/[.15]"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                class="fill-jacarta-700 dark-mode-light h-4 w-4 transition-colors group-hover:fill-white group-focus:fill-white dark:hidden"
+              >
+                <path fill="none" d="M0 0h24v24H0z" />
+                <path
+                  d="M11.38 2.019a7.5 7.5 0 1 0 10.6 10.6C21.662 17.854 17.316 22 12.001 22 6.477 22 2 17.523 2 12c0-5.315 4.146-9.661 9.38-9.981z"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                class="fill-jacarta-700 dark-mode-dark hidden h-4 w-4 transition-colors group-hover:fill-white group-focus:fill-white dark:block dark:fill-white"
+              >
+                <path fill="none" d="M0 0h24v24H0z" />
+                <path
+                  d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"
+                />
+              </svg>
+            </a>
+  
+            <!-- Mobile Menu Toggle -->
+            <button
+              class="js-mobile-toggle border-jacarta-100 hover:bg-accent dark:hover:bg-accent focus:bg-accent group ml-2 flex h-10 w-10 items-center justify-center rounded-full border bg-white transition-colors hover:border-transparent focus:border-transparent dark:border-transparent dark:bg-white/[.15]"
+              aria-label="open mobile menu"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                class="fill-jacarta-700 h-4 w-4 transition-colors group-hover:fill-white group-focus:fill-white dark:fill-white"
+              >
+                <path fill="none" d="M0 0h24v24H0z" />
+                <path d="M18 18v2H6v-2h12zm3-7v2H3v-2h18zm-3-7v2H6V4h12z" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </header>
+
+    <main>
+      <div class="page-loader" id="pageLoader">
+        <div class="loader-egg"></div>
+    </div>
+
+    <div class="bg-animation" id="bgAnimation"></div>
+
+    <nav class="floating-nav">
+        <a href="#overview">Overview</a>
+        <a href="#controls">Controls</a>
+        <a href="#strategy">Strategy</a>
+        <a href="#levels">Levels</a>
+        <a href="#advanced">Advanced</a>
+        <a href="#faq">FAQ</a>
+        <a href="#assessment">Assessment</a>
+        <a href="#games-list">More Games</a>
+
+    </nav>
+
+    <header class="header">
+        <div class="header-content"><br><br><br><br>
+            <h1><img src="/img/white-egg.png" alt="White Egg" style="height:148px;vertical-align:middle;">Eggy Car Unblocked Game<img src="/img/white-egg.png" alt="White Egg" style="height:148px;vertical-align:middle;"></h1>
+            <p class="meta-description">Master the Eggy Car unblocked game with our comprehensive guide covering controls, strategies, level breakdowns, and advanced techniques for the ultimate physics-based driving challenge.</p>
+        </div>
+    </header>
+
+    <div class="container">
+        
+
+        <!-- Game Frame Section - IMPROVED with larger size and fullscreen -->
+        <section class="game-section">
+            <h2 style="text-align: center; color: #ff6b35; margin-bottom: 20px; text-shadow: 0 0 15px rgba(255, 107, 53, 0.3);">🎮 Play Eggy Car Unblocked Game</h2>
+            
+            <div class="fullscreen-container">
+                <div class="game-container" id="gameContainer">
+                    <button class="fullscreen-btn" id="fullscreenBtn" onclick="toggleFullscreen()">
+                        🔍 Fullscreen
+                    </button>
+                    <iframe 
+                        id="gameFrame"
+                        class="game-frame" 
+                        src="/eggycar/index.html" 
+                        frameborder="0" 
+                        allowfullscreen
+                        title="Eggy Car Unblocked Game"
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="game-controls">
+                <button class="control-btn" onclick="toggleFullscreen()">📱 Fullscreen Mode</button>
+                <button class="control-btn" onclick="reloadGame()">🔄 Restart Game</button>
+                <button class="control-btn" onclick="showControls()">🎮 Show Controls</button>
+            </div>
+
+            <div style="text-align: center; margin-top: 20px;">
+                <p style="color: #b8b8cc; font-size: 1rem; margin-bottom: 15px;">
+                    🎯 Use arrow keys or WASD to control your car. Drive carefully and don't drop the egg!
+                </p>
+                <div>
+                    <span style="background: rgba(0,255,136,0.2); padding: 8px 15px; border-radius: 15px; margin: 5px; font-size: 12px;">▶ Instant Play</span>
+                    <span style="background: rgba(255,165,0,0.2); padding: 8px 15px; border-radius: 15px; margin: 5px; font-size: 12px;">🔓 Unblocked</span>
+                    <span style="background: rgba(0,212,255,0.2); padding: 8px 15px; border-radius: 15px; margin: 5px; font-size: 12px;">📱 Mobile Ready</span>
+                    <span style="background: rgba(255,107,53,0.2); padding: 8px 15px; border-radius: 15px; margin: 5px; font-size: 12px;">🔍 Fullscreen Available</span>
+                </div>
+            </div>
+        </section>
+        <div class="quick-summary">
+            <strong>Quick Summary:</strong> Eggy Car is an addictive physics-based driving game where you must transport a fragile egg across challenging terrain without breaking it. This guide covers everything from basic controls to advanced speedrun techniques, helping you master the delicate balance between speed and stability required to complete all levels successfully.
+        </div>
+
+        <section class="section" id="overview">
+            <h2>🎮 Game Overview</h2>
+            <p>Eggy Car has captured the hearts of millions of players worldwide with its deceptively simple yet incredibly challenging gameplay. At its core, the game presents a unique physics puzzle: how do you drive a car carrying a precious egg across bumpy, unpredictable terrain without letting it fall and break?</p>
+            
+            <p>What makes Eggy Car special is its perfect balance of accessibility and depth. Anyone can pick up and play within seconds, but mastering the game's nuanced physics system requires patience, practice, and strategic thinking. The game's minimalist design focuses your attention entirely on the driving mechanics, creating an intensely focused experience that's both relaxing and nerve-wracking.</p>
+
+            <p>The core gameplay revolves around momentum management and anticipation. Unlike traditional racing games where speed is king, Eggy Car rewards careful planning and smooth execution. Every bump, hill, and jump becomes a calculated risk that could either advance your progress or send your precious cargo tumbling to its doom.</p>
+
+            <p>The game's appeal lies in its universal challenge - everyone understands the goal immediately, but achieving it consistently separates casual players from true masters. The physics engine responds realistically to player inputs, making each run feel authentic and every success genuinely earned.</p>
+        </section>
+
+        <section class="section" id="controls">
+            <h2>🕹 Controls & Mechanics</h2>
+            
+            <h3>Complete Control Reference</h3>
+            <table class="controls-table">
+                <thead>
+                    <tr>
+                        <th>Platform</th>
+                        <th>Accelerate</th>
+                        <th>Brake/Reverse</th>
+                        <th>Tips</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Desktop</strong></td>
+                        <td>Arrow Up / W Key</td>
+                        <td>Arrow Down / S Key</td>
+                        <td>Use short taps for precision control</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Mobile</strong></td>
+                        <td>Right side touch</td>
+                        <td>Left side touch</td>
+                        <td>Light touches work better than holding</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tablet</strong></td>
+                        <td>Right screen tap</td>
+                        <td>Left screen tap</td>
+                        <td>Use thumbs for better precision</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Advanced Technique Boxes</h3>
+            <div class="strategy-grid">
+                <div class="strategy-card">
+                    <h4>🎯 Feather Touch Technique</h4>
+                    <p>Instead of holding acceleration, use rapid light taps. This gives you better control over speed and prevents sudden jolts that could destabilize the egg.</p>
+                </div>
+                <div class="strategy-card">
+                    <h4>⚖ Weight Distribution</h4>
+                    <p>Understand that the egg's position affects your car's center of gravity. When the egg slides forward, your front becomes heavier and changes handling.</p>
+                </div>
+                <div class="strategy-card">
+                    <h4>🌊 Momentum Waves</h4>
+                    <p>Use gravity to your advantage on downhills. Build momentum naturally rather than forcing acceleration, which often leads to instability.</p>
+                </div>
+            </div>
+
+            <h3>Physics Understanding</h3>
+            <p>Eggy Car's physics engine simulates realistic vehicle dynamics with several key principles:</p>
+            <ul>
+                <li><strong>Inertia:</strong> Objects in motion stay in motion - sudden stops send the egg flying forward</li>
+                <li><strong>Friction:</strong> Your tires grip the surface, but the egg can slide independently in your car</li>
+                <li><strong>Gravity:</strong> Affects both your car and egg separately, creating complex interactions</li>
+                <li><strong>Suspension:</strong> Your car has realistic suspension that bounces and settles</li>
+            </ul>
+        </section>
+
+        <section class="section" id="strategy">
+            <h2>🧠 Strategy Guide by Skill Level</h2>
+
+            <div class="strategy-grid">
+                <div class="strategy-card">
+                    <h4>🌱 Beginner Strategies</h4>
+                    <ul>
+                        <li>Start slow - speed comes with practice</li>
+                        <li>Focus on keeping the egg in the center of your car</li>
+                        <li>Use gentle acceleration and braking</li>
+                        <li>Learn to anticipate bumps and obstacles</li>
+                        <li>Practice the timing of acceleration release before jumps</li>
+                    </ul>
+                </div>
+
+                <div class="strategy-card">
+                    <h4>🔥 Intermediate Techniques</h4>
+                    <ul>
+                        <li>Master the art of preemptive braking</li>
+                        <li>Learn to use reverse strategically for positioning</li>
+                        <li>Develop rhythm for consistent runs</li>
+                        <li>Start recognizing level patterns and optimal paths</li>
+                        <li>Practice egg recovery techniques when it starts sliding</li>
+                    </ul>
+                </div>
+
+                <div class="strategy-card">
+                    <h4>⚡ Advanced Tactics</h4>
+                    <ul>
+                        <li>Exploit momentum conservation for speed</li>
+                        <li>Master mid-air corrections during jumps</li>
+                        <li>Use counter-steering for fine adjustments</li>
+                        <li>Develop muscle memory for common obstacles</li>
+                        <li>Learn to read terrain ahead for optimal planning</li>
+                    </ul>
+                </div>
+
+                <div class="strategy-card">
+                    <h4>🏆 Expert Mastery</h4>
+                    <ul>
+                        <li>Frame-perfect inputs for speedrunning</li>
+                        <li>Advanced physics manipulation techniques</li>
+                        <li>Optimal route memorization for each level</li>
+                        <li>Risk-reward analysis for aggressive plays</li>
+                        <li>Consistent sub-optimal recovery strategies</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="levels">
+            <h2>🏁 Level Breakdown & Progression</h2>
+            
+            <div class="level-grid">
+                <div class="level-card">
+                    <div class="level-number">1-5</div>
+                    <h4>Tutorial Hills</h4>
+                    <p><strong>Difficulty:</strong> Easy</p>
+                    <p><strong>Key Skills:</strong> Basic acceleration, gentle braking, understanding physics</p>
+                    <p>Perfect for learning the fundamentals without major obstacles.</p>
+                </div>
+
+                <div class="level-card">
+                    <div class="level-number">6-15</div>
+                    <h4>Bumpy Roads</h4>
+                    <p><strong>Difficulty:</strong> Medium</p>
+                    <p><strong>Key Skills:</strong> Rhythm development, bump navigation, speed control</p>
+                    <p>Introduces more challenging terrain with regular bumps and small jumps.</p>
+                </div>
+
+                <div class="level-card">
+                    <div class="level-number">16-25</div>
+                    <h4>Jump Zones</h4>
+                    <p><strong>Difficulty:</strong> Hard</p>
+                    <p><strong>Key Skills:</strong> Jump preparation, landing technique, momentum management</p>
+                    <p>Features significant jumps requiring precise speed and timing.</p>
+                </div>
+
+                <div class="level-card">
+                    <div class="level-number">26-35</div>
+                    <h4>Extreme Terrain</h4>
+                    <p><strong>Difficulty:</strong> Very Hard</p>
+                    <p><strong>Key Skills:</strong> Advanced physics, pattern recognition, recovery techniques</p>
+                    <p>Complex combinations of obstacles testing all acquired skills.</p>
+                </div>
+
+                <div class="level-card">
+                    <div class="level-number">36+</div>
+                    <h4>Master Challenges</h4>
+                    <p><strong>Difficulty:</strong> Expert</p>
+                    <p><strong>Key Skills:</strong> Perfection, consistency, speedrun optimization</p>
+                    <p>Ultimate tests designed to challenge even the most skilled players.</p>
+                </div>
+            </div>
+
+            <h3>Level-Specific Tips</h3>
+            <p>Each group of levels introduces new mechanics and challenges that build upon previous skills. Early levels focus on basic control and physics understanding, while later levels demand precise execution and advanced techniques. The key to progression is mastering each level group's core skills before advancing.</p>
+        </section>
+
+        <section class="section" id="advanced">
+            <h2>🚀 Advanced Techniques & Speedrun Strategies</h2>
+            
+            <h3>Expert Strategies</h3>
+            <div class="strategy-grid">
+                <div class="strategy-card">
+                    <h4>🏎 Speed Conservation</h4>
+                    <p>Master the art of maintaining momentum through challenging sections by using minimal inputs and letting physics work in your favor.</p>
+                </div>
+                
+                <div class="strategy-card">
+                    <h4>🎯 Precision Landing</h4>
+                    <p>Learn to control your car's angle during jumps for optimal landing that preserves speed and egg stability.</p>
+                </div>
+                
+                <div class="strategy-card">
+                    <h4>⚡ Frame-Perfect Inputs</h4>
+                    <p>For speedrunning, develop timing for frame-perfect acceleration and braking inputs that optimize every movement.</p>
+                </div>
+            </div>
+
+            <h3>Community Techniques</h3>
+            <p>The Eggy Car community has developed several advanced techniques over time:</p>
+            <ul>
+                <li><strong>The Egg Float:</strong> A technique where expert players manipulate acceleration to keep the egg "floating" during rough terrain</li>
+                <li><strong>Reverse Momentum:</strong> Using reverse strategically to position for optimal acceleration phases</li>
+                <li><strong>Suspension Loading:</strong> Pre-loading your suspension before jumps for better control</li>
+                <li><strong>Corner Cutting:</strong> Finding optimal paths that reduce travel time without increasing risk</li>
+            </ul>
+
+            <h3>Speedrun Records & Optimization</h3>
+            <p>Current world record holders have perfected routes that balance aggressive play with consistent execution. Key optimization areas include:</p>
+            <ul>
+                <li>Memorizing optimal speed for each section</li>
+                <li>Identifying risk-reward opportunities for time saves</li>
+                <li>Developing consistent recovery strategies for minor mistakes</li>
+                <li>Practicing splits to identify improvement areas</li>
+            </ul>
+        </section>
+
+        <section class="section" id="faq">
+            <h2>❓ Frequently Asked Questions</h2>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What's the best strategy for handling big jumps?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        For big jumps, reduce speed before takeoff to maintain control during flight. Release acceleration just before the jump and prepare to brake gently upon landing. The key is landing with your car level to prevent the egg from sliding forward on impact.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How do I recover when the egg starts sliding around?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        When the egg starts sliding, gently accelerate or brake to shift your car's angle and help the egg settle back into position. Avoid sudden movements that could make the sliding worse. Sometimes stopping completely and letting physics settle the egg is the best approach.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Is there a difference between mobile and desktop versions?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        The core physics are identical, but control precision differs. Desktop keyboard controls often provide better precision for advanced techniques, while mobile touch controls can be more intuitive for beginners. Both versions are equally capable of achieving high-level play.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Why do some levels seem impossible to complete?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Every level is designed to be completable, but some require specific techniques or approaches. If you're stuck, try different speeds, alternative paths, or watch how other players handle the same section. Sometimes a completely different approach unlocks the solution.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What's the most common mistake new players make?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        The biggest mistake is trying to go too fast too soon. New players often think speed equals progress, but Eggy Car rewards patience and smooth driving over aggressive acceleration. Master control at slower speeds before attempting faster runs.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How long does it take to master Eggy Car?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Basic competency can be achieved in a few hours, but true mastery takes weeks or months of practice. The learning curve is steep initially but becomes more gradual as you develop muscle memory and physics intuition. Consistent practice is more valuable than long grinding sessions.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Are there any accessibility options for players with disabilities?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Eggy Car's simple two-button control scheme makes it accessible to many players. The game can be played one-handed and works with various assistive devices. Custom keyboard mapping and touch sensitivity adjustments can help accommodate different needs.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Why does my egg keep falling when I think I'm driving smoothly?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        This usually happens due to sudden acceleration or deceleration changes. The egg has its own physics and responds to forces differently than your car. Focus on gradual speed changes and avoid abrupt inputs, especially when approaching bumps or after landing jumps.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="assessment">
+            <h2>📊 Final Assessment</h2>
+            
+            <div class="pros-cons">
+                <div class="pros">
+                    <h4>✅ Strengths</h4>
+                    <ul>
+                        <li>Simple controls that anyone can learn quickly</li>
+                        <li>Deep physics system that rewards skill development</li>
+                        <li>Perfect balance of challenge and accessibility</li>
+                        <li>Excellent replay value with multiple difficulty levels</li>
+                        <li>Works flawlessly across all devices and platforms</li>
+                        <li>No ads or distractions from pure gameplay</li>
+                        <li>Satisfying progression system that feels earned</li>
+                        <li>Strong speedrunning and competitive community</li>
+                    </ul>
+                </div>
+                
+                <div class="cons">
+                    <h4>❌ Limitations</h4>
+                    <ul>
+                        <li>Can be frustrating for players seeking instant gratification</li>
+                        <li>Limited visual variety in level design</li>
+                        <li>No multiplayer or social features</li>
+                        <li>Steep learning curve may discourage some players</li>
+                        <li>Repetitive gameplay loop might not appeal to everyone</li>
+                        <li>No progression tracking or achievement system</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>Target Audience Recommendations</h3>
+            <p><strong>Perfect For:</strong> Players who enjoy physics-based puzzles, skill-development games, speedrunning challenges, and minimalist game design. Ideal for those who appreciate games that are easy to learn but difficult to master.</p>
+            
+            <p><strong>Not Ideal For:</strong> Players seeking complex narratives, extensive customization options, or games with significant progression systems. May frustrate those who prefer immediate success over gradual skill building.</p>
+
+            <h3>Overall Value Proposition</h3>
+            <p>Eggy Car represents the pinnacle of accessible skill-based gaming. Its deceptively simple premise masks a surprisingly deep and rewarding experience that can provide hundreds of hours of entertainment. The game's greatest strength lies in its ability to make every success feel genuinely earned while maintaining enough accessibility that anyone can start playing immediately.</p>
+
+            <p>For players willing to invest time in mastering its physics-based challenges, Eggy Car offers one of the most satisfying progression experiences in modern gaming. The lack of external progression systems means your improvement is measured purely by your growing ability to handle increasingly difficult challenges.</p>
+        </section>
+    </div>
+
+    <div class="cta">
+        <h2>🚀 Ready to Master Eggy Car?</h2>
+        <p>Put these strategies into practice and start your journey from beginner to expert. Remember, every master was once a beginner who refused to give up!</p>
+        <a href="#" class="cta-button" onclick="document.getElementById('gameFrame').scrollIntoView({behavior: 'smooth'})">Start Playing Now</a>
+    </div>
+
+    <script>
+        // Page Loading Animation
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                document.getElementById('pageLoader').style.opacity = '0';
+                setTimeout(() => {
+                    document.getElementById('pageLoader').style.display = 'none';
+                }, 500);
+            }, 1000);
+        });
+
+        // Background Particles Animation
+        function createParticles() {
+            const bgAnimation = document.getElementById('bgAnimation');
+            const particleCount = 50;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'bg-particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 15 + 's';
+                particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+                bgAnimation.appendChild(particle);
+            }
+        }
+
+        createParticles();
+
+        // Fullscreen Functionality
+        let isFullscreen = false;
+
+        function toggleFullscreen() {
+            const gameContainer = document.getElementById('gameContainer');
+            const fullscreenBtn = document.getElementById('fullscreenBtn');
+            
+            if (!isFullscreen) {
+                // Enter fullscreen
+                gameContainer.classList.add('fullscreen-mode');
+                fullscreenBtn.innerHTML = '❌ Exit Fullscreen';
+                isFullscreen = true;
+                
+                // Try to use browser fullscreen API if available
+                if (gameContainer.requestFullscreen) {
+                    gameContainer.requestFullscreen();
+                } else if (gameContainer.webkitRequestFullscreen) {
+                    gameContainer.webkitRequestFullscreen();
+                } else if (gameContainer.msRequestFullscreen) {
+                    gameContainer.msRequestFullscreen();
+                }
+            } else {
+                // Exit fullscreen
+                gameContainer.classList.remove('fullscreen-mode');
+                fullscreenBtn.innerHTML = '🔍 Fullscreen';
+                isFullscreen = false;
+                
+                // Exit browser fullscreen
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                } else if (document.webkitExitFullscreen) {
+                    document.webkitExitFullscreen();
+                } else if (document.msExitFullscreen) {
+                    document.msExitFullscreen();
+                }
+            }
+        }
+
+        // Handle ESC key to exit fullscreen
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && isFullscreen) {
+                toggleFullscreen();
+            }
+        });
+
+        // Handle fullscreen change events
+        document.addEventListener('fullscreenchange', function() {
+            if (!document.fullscreenElement && isFullscreen) {
+                toggleFullscreen();
+            }
+        });
+
+        // Game Control Functions
+        function reloadGame() {
+            const gameFrame = document.getElementById('gameFrame');
+            gameFrame.src = gameFrame.src;
+        }
+
+        function showControls() {
+            alert('🎮 CONTROLS:\n\n' +
+                  '⬆ UP Arrow / W - Accelerate\n' +
+                  '⬇ DOWN Arrow / S - Brake/Reverse\n' +
+                  '🎯 Goal: Keep the egg safe while driving!\n\n' +
+                  'Tips:\n' +
+                  '• Drive smoothly to avoid dropping the egg\n' +
+                  '• Use gentle acceleration and braking\n' +
+                  '• Be careful on jumps and bumps\n' +
+                  '• Practice makes perfect!');
+        }
+
+        // FAQ Accordion Functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', function() {
+                const faqItem = this.parentElement;
+                const answer = faqItem.querySelector('.faq-answer');
+                const toggle = this.querySelector('.faq-toggle');
+                
+                // Check if this item is currently active
+                const isActive = faqItem.classList.contains('active');
+                
+                // Close all FAQ items first
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                    const itemAnswer = item.querySelector('.faq-answer');
+                    const itemToggle = item.querySelector('.faq-toggle');
+                    itemAnswer.classList.remove('active');
+                    itemAnswer.style.maxHeight = '0';
+                    itemAnswer.style.padding = '0 20px';
+                    itemToggle.textContent = '+';
+                });
+                
+                // If this item wasn't active, open it
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                    answer.classList.add('active');
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                    answer.style.padding = '20px';
+                    toggle.textContent = '×';
+                }
+            });
+        });
+
+        // Smooth Scrolling for Navigation
+        document.querySelectorAll('.floating-nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                
+                if (targetSection) {
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Hover Effects for Cards
+        document.querySelectorAll('.strategy-card, .level-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+
+        // Intersection Observer for Animation Triggers
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections for scroll animations
+        document.querySelectorAll('.section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(30px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(section);
+        });
+
+        // Active Navigation Highlighting
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('.section');
+            const navLinks = document.querySelectorAll('.floating-nav a');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Performance optimization
+        let ticking = false;
+        function updateScrollPosition() {
+            ticking = false;
+        }
+
+        window.addEventListener('scroll', function() {
+            if (!ticking) {
+                requestAnimationFrame(updateScrollPosition);
+                ticking = true;
+            }
+        });
+
+        // Add hover effects for better UX
+        document.querySelectorAll('.control-btn').forEach(btn => {
+            btn.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-3px) scale(1.05)';
+            });
+            
+            btn.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+    </script>
+    </div><br><br><br><br>
+
+    <div id="games-list"></div>
+    <script>
+      window.games = [
+        { name: "Eggy car", image: "/sarkar/eggy-car.jpg", url: "/play.html" },
+        { name: "Drift Dudes", image: "/sarkar/drift-dudes.jpg", url: "/detail/drift-dudes.html" },
+        { name: "Drive Game 1", image: "/sarkar/drive-mad.jpg", url: "/detail/drive-mad.html" },
+        { name: "Moto Road Rash 3D", image: "/sarkar/motoroadrash3d.jpg", url: "/detail/motoroadrash3d.html" },
+        { name: "1v1.LOL", image: "/sarkar/1v1-lol.jpg", url: "/detail/1v1-lol.html" },
+        { name: "Retro Game 2", image: "/sarkar/retro-bowl.jpg", url: "/detail/retro-bowl.html" },
+        { name: "Getting over it", image: "/sarkar/getting-over-it.jpg", url: "/detail/getting-over-it.html" },
+        { name: "Monkey Mart", image: "/sarkar/monkey-mart.jpg", url: "/detail/monkey-mart.html" },
+        { name: "Moto X3M 3", image: "/sarkar/motox3m-3.jpg", url: "/detail/motox3m-3.html" },
+        { name: "Moto X3M 2", image: "/sarkar/motox3m-2.jpg", url: "/detail/motox3m-2.html" },
+        { name: "Basketball Legends", image: "/sarkar/basketball-legends.jpg", url: "/detail/basketball-legends.html" },
+        { name: "Tunnel Rush", image: "/sarkar/tunnel-rush.jpg", url: "/detail/tunnel-rush.html" },
+        { name: "Drift Hunters", image: "/sarkar/drift-hunters.jpg", url: "/detail/drift-hunters.html" },
+        { name: "Monster Car Game", image: "/sarkar/monster-tracks.jpg", url: "/detail/monster-tracks.html" },
+        { name: "Slope", image: "/sarkar/slope.jpg", url: "/detail/slope.html" },
+        { name: "Sling Drift", image: "/sarkar/sling-drift.jpg", url: "/detail/sling-drift.html" },
+        { name: "Football Legends", image: "/sarkar/football-legends.jpg", url: "/detail/football-legends.html" },
+        { name: "NYC Game", image: "/sarkar/subway-surfers-nyc.jpg", url: "/detail/subway-surfers-nyc.html" },
+        { name: "Cookie Clicker", image: "/sarkar/cookie-clicker.jpg", url: "/detail/cookie-clicker.html" },
+        { name: "Merge Man", image: "/sarkar/stickmerge.jpg", url: "/detail/stickmerge.html" },
+        { name: "Basketball Stars", image: "/sarkar/basketball-stars.jpg", url: "/detail/basketball-stars.html" },
+        { name: "Mad Gunz", image: "/sarkar/mad-gunz.jpg", url: "/detail/mad-gunz.html" },
+        { name: "Penalty kick online", image: "/sarkar/penalty-kick-online.jpg", url: "/detail/penalty-kick-online.html" },
+        { name: "Elasticman", image: "/sarkar/elasticman.jpg", url: "/detail/elasticman.html" },
+        { name: "Merge Iron Halloween", image: "/sarkar/stick-merge-halloween.jpg", url: "/detail/stick-merge-halloween.html" },
+        { name: "Geometry Dash", image: "/sarkar/geometry-dash.jpg", url: "/detail/geometry-dash.html" },
+        { name: "Among us", image: "/sarkar/among-us.jpg", url: "/detail/among-us.html" },
+        { name: "Penalty Shooters 2", image: "/sarkar/penalty-shooters-2.jpg", url: "/detail/penalty-shooters-2.html" },
+        { name: "Rocket Car", image: "/sarkar/rocket-soccer-derby.jpg", url: "/detail/rocket-soccer-derby.html" },
+        { name: "Idle Mining Empire", image: "/sarkar/idle-mining-empire.jpg", url: "/detail/idle-mining-empire.html" },
+        { name: "Drift Boss", image: "/sarkar/drift-boss.jpg", url: "/detail/drift-boss.html" },
+        { name: "Endless truck", image: "/sarkar/endless-truck.jpg", url: "/detail/endless-truck.html" },
+        { name: "Dunkbrush", image: "/sarkar/dunkbrush.jpg", url: "/detail/dunkbrush.html" },
+        { name: "Mr Bullet", image: "/sarkar/mr-bullet.jpg", url: "/detail/mr-bullet.html" },
+        { name: "Tiny Fishing", image: "/sarkar/tiny-fishing.jpg", url: "/detail/tiny-fishing.html" },
+        { name: "Stack Bounce", image: "/sarkar/stackbounce.jpg", url: "/detail/stackbounce.html" },
+        { name: "Highway racer 3D", image: "/sarkar/highway-racer-3d.jpg", url: "/detail/highway-racer-3d.html" },
+        { name: "Parkour Race", image: "/sarkar/parkour-race.jpg", url: "/detail/parkour-race.html" },
+        { name: "Merge Round Racers", image: "/sarkar/merge-round-racers.jpg", url: "/detail/merge-round-racers.html" },
+        { name: "Ovo", image: "/sarkar/ovo.jpg", url: "/detail/ovo.html" },
+        { name: "Car Space Rocket", image: "/sarkar/blumgi-rocket.jpg", url: "/detail/blumgi-rocket.html" },
+        { name: "Pig Super", image: "/sarkar/iron-snout.jpg", url: "/detail/iron-snout.html" },
+        { name: "Pig Super 2", image: "/sarkar/iron-snout-2.jpg", url: "/detail/iron-snout-2.html" },
+        { name: "Flip Bottle", image: "/sarkar/bottle-flip-3d.jpg", url: "/detail/bottle-flip-3d.html" },
+        { name: "FNAF 1", image: "/sarkar/fnaf1.jpg", url: "/detail/fnaf1.html" },
+        { name: "Idle Dice", image: "/sarkar/idle-dice.jpg", url: "/detail/idle-dice.html" },
+        { name: "Tap Tap Shots", image: "/sarkar/tap-tap-shots.jpg", url: "/detail/tap-tap-shots.html" },
+        { name: "Flying Car Simulator", image: "/sarkar/flying-car-simulator.jpg", url: "/detail/flying-car-simulator.html" },
+        { name: "Thumb fighter", image: "/sarkar/thumb-fighter.jpg", url: "/detail/thumb-fighter.html" },
+        { name: "Murder", image: "/sarkar/murder.jpg", url: "/detail/murder.html" },
+        { name: "Stack", image: "/sarkar/rainbow-stacker.jpg", url: "/detail/rainbow-stacker.html" },
+        { name: "Rooftop Snipers", image: "/sarkar/rooftop-snipers.jpg", url: "/detail/rooftop-snipers.html" },
+        { name: "Getaway Shootout", image: "/sarkar/getaway-shootout.jpg", url: "/detail/getaway-shootout.html" },
+        { name: "Angry gran run", image: "/sarkar/angry-gran-run.jpg", url: "/detail/angry-gran-run.html" },
+        { name: "Madalin stunt cars 3", image: "/sarkar/madalin-stunt-cars-3.jpg", url: "/detail/madalin-stunt-cars-3.html" },
+        { name: "Temple of boom", image: "/sarkar/temple-of-boom.jpg", url: "/detail/temple-of-boom.html" },
+        { name: "Swing Hook", image: "/sarkar/stickmanhook.jpg", url: "/detail/stickmanhook.html" },
+        { name: "Gold Digger Frvr", image: "/sarkar/gold-digger-frvr.jpg", url: "/detail/gold-digger-frvr.html" },
+        { name: "Wrassling", image: "/sarkar/wrassling.jpg", url: "/detail/wrassling.html" },
+        { name: "golfinity", image: "/sarkar/golfinity.jpg", url: "/detail/golfinity.html" },
+        { name: "Bob The Robber 4", image: "/sarkar/bob-the-robber-4.jpg", url: "/detail/bob-the-robber-4.html" },
+        { name: "Smash Karts", image: "/sarkar/smash-karts.jpg", url: "/detail/smash-karts.html" },
+        { name: "Road Run", image: "/sarkar/crossy-road.jpg", url: "/detail/crossy-road.html" },
+        { name: "Burnin Rubber 5 XS", image: "/sarkar/burnin-rubber-5-xs.jpg", url: "/detail/burnin-rubber-5-xs.html" },
+        { name: "House Of Hazards", image: "/sarkar/house-of-hazards.jpg", url: "/detail/house-of-hazards.html" },
+        { name: "Raft Wars 1", image: "/sarkar/raft-wars.jpg", url: "/detail/raft-wars.html" },
+        { name: "Raft Wars 2", image: "/sarkar/raft-wars-2.jpg", url: "/detail/raft-wars-2.html" },
+        { name: "Extreme Car Parking!", image: "/sarkar/extreme-car-parking.jpg", url: "/detail/extreme-car-parking.html" },
+        { name: "Swipe Fighter Heroes", image: "/sarkar/swipe-fighter-heroes.jpg", url: "/detail/swipe-fighter-heroes.html" },
+        { name: "Fireboy and watergirl", image: "/sarkar/fireboy-and-watergirl-1.jpg", url: "/detail/fireboy-and-watergirl-1.html" },
+        { name: "Jelly stuck", image: "/sarkar/jelly-truck.jpg", url: "/detail/jelly-truck.html" },
+        { name: "Doodle Jump", image: "/sarkar/doodle-jump.jpg", url: "/detail/doodle-jump.html" },
+        { name: "FNAF 2", image: "/sarkar/Fnf.jpg", url: "/detail/fnaf2.html" },
+        { name: "FNAF 3", image: "/sarkar/fnaf3.jpg", url: "/detail/fnaf3.html" },
+        { name: "FNAF 4", image: "/sarkar/fnaf4.jpg", url: "/detail/fnaf4.html" },
+        { name: "FNAF Sister", image: "/sarkar/fnafsl.jpg", url: "/detail/fnafsl.html" },
+        { name: "Tunnel Rush 2", image: "/sarkar/tunnel-rush-2.jpg", url: "/detail/tunnel-rush-2.html" },
+        { name: "Burnout Drift: Hilltop", image: "/sarkar/burnout-drift-hillto.jpg", url: "/detail/burnout-drift-hilltop.html" },
+        { name: "Eagle Ride", image: "/sarkar/eagle-ride.jpg", url: "/detail/eagle-ride.html" },
+        { name: "HongKong Run Man", image: "/sarkar/subway-surfers-hongkong.jpg", url: "/detail/subway-surfers-hongkong.html" },
+        { name: "Idle startup tycoon", image: "/sarkar/idle-startup-tycoon.jpg", url: "/detail/idle-startup-tycoon.html" },
+        { name: "2048", image: "/sarkar/2048.jpg", url: "/detail/2048.html" },
+        { name: "Duck Life 4", image: "/sarkar/ducklife-4.jpg", url: "/detail/ducklife-4.html" },
+        { name: "Candy Jump", image: "/sarkar/candy-jump.jpg", url: "/detail/candy-jump.html" },
+        { name: "Idle Miner", image: "/sarkar/idle-miner.jpg", url: "/detail/idle-miner.html" },
+        { name: "Demolition Derby Crash Racing", image: "/sarkar/demolition-derby-crash-racing.jpg", url: "/detail/demolition-derby-crash-racing.html" },
+        { name: "Top Speed 3D", image: "/sarkar/top-speed-3d.jpg", url: "/detail/top-speed-3d.html" },
+        { name: "Adventure Drivers", image: "/sarkar/adventure-drivers.jpg", url: "/detail/adventure-drivers.html" },
+        { name: "Worlds hardest game", image: "/sarkar/worlds-hardest-game.jpg", url: "/detail/worlds-hardest-game.html" },
+        { name: "Color Road", image: "/sarkar/color-road.jpg", url: "/detail/color-road.html" },
+        { name: "Microwars", image: "/sarkar/microwars.jpg", url: "/detail/microwars.html" },
+        { name: "Rolly Vortex", image: "/sarkar/rolly-vortex.jpg", url: "/detail/rolly-vortex.html" },
+        { name: "Car Drift Racers 2", image: "/sarkar/car-drift-racers-2.jpg", url: "/detail/car-drift-racers-2.html" }
+      ]; const gamesList = document.getElementById('games-list');
+      games.forEach(game => {
+        const a = document.createElement('a');
+        a.href = game.url;
+        a.innerHTML = `<img src="${game.image}" alt="${game.name}" width="94" height="94"><span>${game.name}</span>`;
+        gamesList.appendChild(a);
+      });
+    </script>
+
+    </div>
+    <div style="display: contents;">
+      <div class="sc-1ri0y0w-6 jfAzpO">
+        <div style="background-color: var(--green-7);" class="sc-1ri0y0w-7 lgEayX">
+          <div decoding="async" class="sc-1ri0y0w-2 mvtOn"></div>
+        </div>
+      </div>
+    </div>
+
+    </div>
+
+    </div>
+    <!-- end hero -->
+  </main>
+
+  <br><br><br>
+  <!-- Footer -->    <footer class="dark:bg-jacarta-800 page-footer bg-white">
+      <div class="container">
+        <div class="grid grid-cols-6 gap-x-7 gap-y-14 pt-24 pb-12 md:grid-cols-12">
+          <div class="col-span-3 md:col-span-4">
+            <!-- Logo -->
+            <a href="/" class="mb-6 inline-block">
+              <img src="img/logo.png" class="max-h-7 dark:hidden" alt="Eggy Car Unblocked" />
+              <img src="img/logo_white.png" class="hidden max-h-7 dark:block" alt="Eggy Car Unblocked" />
+            </a>
+            <p class="dark:text-jacarta-300 mb-12">
+              Play Free Unblocked Online Games - Instant Browser Gaming for School, Office & Home - No Downloads Required, Available 24/7 Anywhere. on <a href="https://eggy-car-official.com">Eggy Car Unblocked</a>
+            </p>
+            <!-- Socials -->
+            <div class="flex space-x-5">
+              <a href="#" class="group">
+                <svg
+                  aria-hidden="true"
+                  focusable="false"
+                  data-prefix="fab"
+                  data-icon="facebook"
+                  class="group-hover:fill-accent fill-jacarta-300 h-5 w-5 dark:group-hover:fill-white"
+                  role="img"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                >
+                  <path
+                    d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"
+                  ></path>
+                </svg>
+              </a>
+              <a href="#" class="group">
+                <svg
+                  aria-hidden="true"
+                  focusable="false"
+                  data-prefix="fab"
+                  data-icon="twitter"
+                  class="group-hover:fill-accent fill-jacarta-300 h-5 w-5 dark:group-hover:fill-white"
+                  role="img"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                >
+                  <path
+                    d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
+                  ></path>
+                </svg>
+              </a>
+              <a href="#" class="group">
+                <svg
+                  aria-hidden="true"
+                  focusable="false"
+                  data-prefix="fab"
+                  data-icon="discord"
+                  class="group-hover:fill-accent fill-jacarta-300 h-5 w-5 dark:group-hover:fill-white"
+                  role="img"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 640 512"
+                >
+                  <path
+                    d="M524.531,69.836a1.5,1.5,0,0,0-.764-.7A485.065,485.065,0,0,0,404.081,32.03a1.816,1.816,0,0,0-1.923.91,337.461,337.461,0,0,0-14.9,30.6,447.848,447.848,0,0,0-134.426,0,309.541,309.541,0,0,0-15.135-30.6,1.89,1.89,0,0,0-1.924-.91A483.689,483.689,0,0,0,116.085,69.137a1.712,1.712,0,0,0-.788.676C39.068,183.651,18.186,294.69,28.43,404.354a2.016,2.016,0,0,0,.765,1.375A487.666,487.666,0,0,0,176.02,479.918a1.9,1.9,0,0,0,2.063-.676A348.2,348.2,0,0,0,208.12,430.4a1.86,1.86,0,0,0-1.019-2.588,321.173,321.173,0,0,1-45.868-21.853,1.885,1.885,0,0,1-.185-3.126c3.082-2.309,6.166-4.711,9.109-7.137a1.819,1.819,0,0,1,1.9-.256c96.229,43.917,200.41,43.917,295.5,0a1.812,1.812,0,0,1,1.924.233c2.944,2.426,6.027,4.851,9.132,7.16a1.884,1.884,0,0,1-.162,3.126,301.407,301.407,0,0,1-45.89,21.83,1.875,1.875,0,0,0-1,2.611,391.055,391.055,0,0,0,30.014,48.815,1.864,1.864,0,0,0,2.063.7A486.048,486.048,0,0,0,610.7,405.729a1.882,1.882,0,0,0,.765-1.352C623.729,277.594,590.933,167.465,524.531,69.836ZM222.491,337.58c-28.972,0-52.844-26.587-52.844-59.239S193.056,219.1,222.491,219.1c29.665,0,53.306,26.82,52.843,59.239C275.334,310.993,251.924,337.58,222.491,337.58Zm195.38,0c-28.971,0-52.843-26.587-52.843-59.239S388.437,219.1,417.871,219.1c29.667,0,53.307,26.82,52.844,59.239C470.715,310.993,447.538,337.58,417.871,337.58Z"
+                  ></path>
+                </svg>
+              </a>
+              <a href="#" class="group">
+                <svg
+                  aria-hidden="true"
+                  focusable="false"
+                  data-prefix="fab"
+                  data-icon="instagram"
+                  class="group-hover:fill-accent fill-jacarta-300 h-5 w-5 dark:group-hover:fill-white"
+                  role="img"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                >
+                  <path
+                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                  ></path>
+                </svg>
+              </a>
+              <a href="#" class="group">
+                <svg
+                  aria-hidden="true"
+                  focusable="false"
+                  data-prefix="fab"
+                  data-icon="tiktok"
+                  class="group-hover:fill-accent fill-jacarta-300 h-5 w-5 dark:group-hover:fill-white"
+                  role="img"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                >
+                  <path
+                    d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+        </div>
+        <div class="flex flex-col items-center justify-between space-y-2 py-8 sm:flex-row sm:space-y-0">
+          <span class="dark:text-jacarta-400 text-sm"
+            >&copy;
+            <script>
+              document.write(new Date().getFullYear())
+            </script>
+            eggy-car-official.com</span>
+          <ul class="dark:text-jacarta-400 flex flex-wrap space-x-4 text-sm">
+            <li>
+              <a href="/terms.html" class="hover:text-accent">Terms and conditions</a>
+            </li>
+            <li><a href="/privacy.html" class="hover:text-accent">Privacy policy</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JS Scripts -->
+    <script src="/js/app.bundle.js"></script>
+     <script src="/js/play.js?v=4"></script>
+    <script src="/game.js"></script>
+    <script src="/search.js"></script>
+  </body>
+</html>
